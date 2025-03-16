@@ -34,6 +34,9 @@ public class Book {
     @Column(name = "COST", nullable = false)
     private BigDecimal cost;
 
+    @Column(name = "AVAILABLE", nullable = false)
+    private boolean available;
+
     public Long getBookId() {
         return bookId;
     }
@@ -88,5 +91,13 @@ public class Book {
 
     public void setCost(BigDecimal cost) {
         this.cost = cost;
+    }
+
+    public boolean isAvailable() {
+        return available;
+    }
+
+    public void setAvailable(boolean available) {
+        this.available = available;
     }
 }
